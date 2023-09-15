@@ -1,8 +1,8 @@
 import pandas as pd
 import glob
 
-# Укажите индексы столбцов, которые вы хотите сохранить
-# cols_to_keep = [2, 3, 5]  # В этом случае мы сохраняем 3, 4 и 6 столбцы
+# Specify the indices of the columns you want to keep
+# cols_to_keep = [2, 3, 5]  # In this case, we keep columns 3, 4, and 6
 
 csv_files = glob.glob("C:/Users/lexx-/Desktop/dataARB/*.csv")
 
@@ -10,9 +10,9 @@ data_frames = []
 
 for csv in csv_files:
     df = pd.read_csv(csv, header=None)
-    # Делаем вычитание между столбцами с индексами 2 и 3 (третий и четвертый столбцы)
+    # Perform subtraction between columns with indices 2 and 3 (third and fourth columns)
     df["diff"] = df.iloc[:, 2] - df.iloc[:, 3]
-    # Сохраняем столбец с индексом 5 и новый столбец 'diff'
+    # Keep the column with index 5 and the new 'diff' column
     df = df[["diff", 5]]
     data_frames.append(df)
 
