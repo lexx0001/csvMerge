@@ -38,5 +38,4 @@ Functions and Loops:
 2. Merge all the individual data frames stored in `data_frames` into `merged_df`.
 3. Write `merged_df` into a new CSV file without index and header.
 
--------------------Шэ
-Ы
+
